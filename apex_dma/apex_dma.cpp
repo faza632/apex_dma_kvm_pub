@@ -465,19 +465,16 @@ void ClientActions() {
 
       if (global_settings.keyboard) {
         if (isPressed(global_settings.aimbot_hot_key_1) ||
-            (isPressed(global_settings.aimbot_hot_key_2) &&
-             !isPressed(
-                 global_settings.tigger_bot_hot_key))) // Left and Right click
+            isPressed(global_settings.aimbot_hot_key_2) ) // Left and Right click
         {
           aiming = true;
         } else {
           aiming = false;
         }
-        if (isPressed(global_settings.aimbot_hot_key_1) ||
-            !isPressed(global_settings.aimbot_hot_key_2)) {
+        if (!isPressed(109)) {
           max_fov = global_settings.non_ads_fov;
         }
-        if (isPressed(global_settings.aimbot_hot_key_2)) {
+        if (isPressed(109)) {
           max_fov = global_settings.ads_fov;
         }
         if (isPressed(
